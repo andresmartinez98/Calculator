@@ -44,8 +44,7 @@ export const useCalculadora = () => {
 
     switch (ultimaOperacion.current) {
       case Operadores.division:
-        dividir(num1, num2);
-        // setNumero(`${num2 / num1}`);
+        setNumero(`${num2 / num1}`);
         break;
       case Operadores.multiplicacion:
         setNumero(`${num1 * num2}`);
@@ -58,14 +57,6 @@ export const useCalculadora = () => {
         break;
     }
     setNumeroAnterior('');
-  };
-
-  const dividir = (num1: number, num2: number) => {
-    if (num1 !== 0) {
-      setNumero(`${num2 / num1}`);
-    } else {
-      setNumero('vos sos pelotudo?');
-    }
   };
 
   // C
